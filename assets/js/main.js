@@ -37,3 +37,14 @@ const scrollHeader = () => {
     : header.classList.remove('scroll-header');
 };
 window.addEventListener('scroll', scrollHeader);
+
+const { calculatePrice1, calculatePrice2, calculatePrice3, calculatePrice4, calculatePrice5 } = require('./functions');
+const options = {
+  drink_type: 'blended',
+  size: 'M',
+  whipped_cream: 'with',
+  availability_L_size: true,
+};
+
+const price1 = calculatePrice1(options);
+console.log('Price 1:', price1);
